@@ -366,6 +366,56 @@ int main(void)
   HAL_GPIO_WritePin(ADF4360_LE_GPIO_Port, ADF4360_LE_Pin, GPIO_PIN_SET); // LE off
   HAL_Delay(15);
 
+
+  //  /*-----------------------Старая версия -----------------------------------------------*/
+  //  uint8_t data[3];
+  //  uint8_t data2[3];
+  //  uint8_t data3[3];
+  //  // R counter latch
+  //   data[0]=0x30;  //старший
+  //   data[1]=0x00;  //средний
+  //   data[2]=0x29;  //младший
+  //
+  //   // control latch data
+  //   data2[0]=0x4F;
+  //   data2[1]=0xF1;
+  //   data2[2]=0xC4;
+  //
+  //   // N counter latch data
+  //   data3[0]=0x00;
+  //   data3[1]=0x50;
+  //   data3[2]=0x2A;
+  //
+  //  // Заполняем регистры ADF4360
+  //  HAL_GPIO_WritePin(ADF4360_LE_GPIO_Port, ADF4360_LE_Pin, GPIO_PIN_RESET); // LE on
+  //  // Отправляем по SPI R counter Latch
+  ////  HAL_SPI_Transmit(&hspi2,Rcounter_Latch,3,100);
+  //  HAL_SPI_Transmit(&hspi2,data,3,10); // отправляем по SPI
+  //
+  //  HAL_GPIO_WritePin(ADF4360_LE_GPIO_Port, ADF4360_LE_Pin, GPIO_PIN_SET); // LE off
+  //  HAL_Delay(15);
+  //
+  //
+  //  HAL_GPIO_WritePin(ADF4360_LE_GPIO_Port, ADF4360_LE_Pin, GPIO_PIN_RESET); // LE on
+  //  // Отправляем по SPI Control Latch
+  //  //HAL_SPI_Transmit(&hspi2,Control_Latch,3,100);
+  //  HAL_SPI_Transmit(&hspi2,data2,3,10); // отправляем по SPI
+  //
+  //  HAL_GPIO_WritePin(ADF4360_LE_GPIO_Port, ADF4360_LE_Pin, GPIO_PIN_SET); // LE off
+  //  HAL_Delay(15);
+  //
+  //
+  //  HAL_GPIO_WritePin(ADF4360_LE_GPIO_Port, ADF4360_LE_Pin, GPIO_PIN_RESET); // LE on
+  //  // Отправляем по SPI N counter Latch
+  //  //HAL_SPI_Transmit(&hspi2,Ncounter_Latch,3,100);
+  //  HAL_SPI_Transmit(&hspi2,data3,3,10); // отправляем по SPI
+  //
+  //  HAL_GPIO_WritePin(ADF4360_LE_GPIO_Port, ADF4360_LE_Pin, GPIO_PIN_SET); // LE off
+  //  HAL_Delay(15);
+  //  /*-----------------------Старая версия -----------------------------------------------*/
+
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
